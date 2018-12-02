@@ -1,0 +1,68 @@
+package fr.ensisa.hassenforder.transportation.server.network;
+
+import java.io.InputStream;
+
+import fr.ensisa.hassenforder.network.BasicAbstractReader;
+import fr.ensisa.hassenforder.transportation.kiosk.network.Protocol;
+import fr.ensisa.hassenforder.transportation.server.model.Route;
+import fr.ensisa.hassenforder.transportation.server.model.Subscription;
+import fr.ensisa.hassenforder.transportation.server.model.Subscription.Month;
+import fr.ensisa.hassenforder.transportation.server.model.Ticket;
+import fr.ensisa.hassenforder.transportation.server.model.Urban;
+
+public class KioskReader extends BasicAbstractReader {
+	/* Server */
+
+	private long passId;
+	private String From;
+	private String To;
+	private int count;
+
+	public KioskReader(InputStream inputStream) {
+		super(inputStream);
+	}
+
+	public void receive() {
+		type = readInt();
+		switch (type) {
+		case 0:
+			break;
+		case Protocol.RQ_CARD_CREATE:
+			break;
+		case Protocol.RQ_KIOSK_CARD_DESC:
+			passId = readLong();
+			break;
+		case Protocol.RQ_BUY_ROUTE:
+			this.passId = readLong();
+			this.From = readString();
+			this.To = readString();
+			this.count = readInt();
+			break;
+		case Protocol.RQ_BUY_URBAN:
+			this.passId = readLong();
+			this.count = readInt();
+			break;
+		case Protocol.RQ_BUY_SUBSCRIPTION:
+			this.passId = readLong();
+			// String month = readString();
+			break;
+		}
+
+	}
+
+	protected long getPassId() {
+		return this.passId;
+	}
+
+	protected String getTo() {
+		return this.To;
+	}
+
+	protected String getFrom() {
+		return this.From;
+	}
+
+	protected int getCount() {
+		return this.count;
+	}
+}

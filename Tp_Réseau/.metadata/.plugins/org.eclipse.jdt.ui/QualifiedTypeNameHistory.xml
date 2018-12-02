@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="java.util.HashMap"/>
+<fullyQualifiedTypeName name="fr.ensisa.hassenforder.transportation.server.model.Route"/>
+<fullyQualifiedTypeName name="javax.security.auth.login.AccountException"/>
+<fullyQualifiedTypeName name="fr.ensisa.hassenforder.transportation.bank.model.Account.Behaviour"/>
+<fullyQualifiedTypeName name="fr.ensisa.hassenforder.transportation.server.network.TerminalSession"/>
+<fullyQualifiedTypeName name="fr.ensisa.hassenforder.transportation.server.network.TerminalReader"/>
+<fullyQualifiedTypeName name="fr.ensisa.hassenforder.transportation.server.network.TerminalWriter"/>
+<fullyQualifiedTypeName name="java.io.Writer"/>
+<fullyQualifiedTypeName name="java.util.Map"/>
+<fullyQualifiedTypeName name="fr.ensisa.hassenforder.transportation.terminal.model.Ticket"/>
+<fullyQualifiedTypeName name="java.net.Proxy.Type"/>
+<fullyQualifiedTypeName name="fr.ensisa.hassenforder.transportation.kiosk.model.Ticket.Type"/>
+<fullyQualifiedTypeName name="fr.ensisa.hassenforder.transportation.kiosk.model.Ticket"/>
+<fullyQualifiedTypeName name="fr.ensisa.hassenforder.transportation.kiosk.model.Ticket.Month"/>
+<fullyQualifiedTypeName name="fr.ensisa.hassenforder.transportation.server.model.Ticket"/>
+<fullyQualifiedTypeName name="fr.ensisa.hassenforder.transportation.server.model.Subscription.Month"/>
+<fullyQualifiedTypeName name="fr.ensisa.hassenforder.transportation.server.model.Subscription"/>
+<fullyQualifiedTypeName name="fr.ensisa.hassenforder.transportation.terminal.network.Protocol"/>
+<fullyQualifiedTypeName name="fr.ensisa.hassenforder.transportation.server.network.BankWriter"/>
+<fullyQualifiedTypeName name="fr.ensisa.hassenforder.transportation.server.network.BankReader"/>
+<fullyQualifiedTypeName name="javax.transaction.xa.XAResource"/>
+<fullyQualifiedTypeName name="fr.ensisa.hassenforder.transportation.bank.network.Protocol"/>
+<fullyQualifiedTypeName name="fr.ensisa.hassenforder.transportation.kiosk.network.Protocol"/>
+<fullyQualifiedTypeName name="fr.ensisa.hassenforder.transportation.server.model.Transaction"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="java.lang.System"/>
+</qualifiedTypeNameHistroy>
