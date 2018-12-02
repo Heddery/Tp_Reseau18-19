@@ -1,0 +1,75 @@
+package fr.ensisa.hassenforder.transportation.server.network;
+
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.Map;
+
+import fr.ensisa.hassenforder.network.BasicAbstractReader;
+import fr.ensisa.hassenforder.transportation.kiosk.network.Protocol;
+import fr.ensisa.hassenforder.transportation.server.model.Route;
+import fr.ensisa.hassenforder.transportation.server.model.Subscription;
+import fr.ensisa.hassenforder.transportation.server.model.Ticket;
+import fr.ensisa.hassenforder.transportation.server.model.Urban;
+
+public class KioskReader extends BasicAbstractReader
+{
+  /*Server*/
+
+  private int CARD_ID;
+  private String From;
+  private String Destination;
+  int Nb_Trajets=0;
+  
+/*  public class CARD_INFO
+  {
+   public CARD_INFO(String _Description, String _Travels, String _Subscriptions, int _L1_1)
+   {
+    this.Description=_Description;
+    this.Travels=_Travels;
+    this.Subscriptions=_Subscriptions;
+    this.L1_1=_L1_1;
+   }
+   String Description;
+   String Travels;//il faut changer le type le rendre en tableau 2 demensions [FROM] [TO] 
+   String Subscriptions;
+   int L1_1;
+  }
+  
+  CARD_INFO card= new CARD_INFO("","","",0);
+  
+  Map<String, CARD_INFO> CARDS = new HashMap<>();
+  */
+ public KioskReader(InputStream inputStream)
+ {
+   super (inputStream);
+ }
+
+ public void receive()
+ {
+  type = readInt ();
+  switch (type)
+  {
+   case 0:
+    break;
+   case Protocol.RQ_CARD_CREATE:
+    break;
+   case Protocol.RQ_KIOSK_CARD_DESC:
+    CARD_ID = readInt();
+    break;
+   case Protocol.RQ_BUY_ROUTE:
+    CARD_ID = readInt();
+    From= readString();
+    Destination = readString();
+    Nb_Trajets=readInt();
+    
+    
+    break;
+   case Protocol.RQ_BUY_URBAN:
+    CARD_ID = readInt();
+   break;
+   case Protocol.RQ_BUY_SUBSCRIPTION:
+    CARD_ID = readInt();
+   break;
+  }
+ }
+}
